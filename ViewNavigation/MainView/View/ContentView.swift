@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State var userName: String = ""
     @State var updatedName: String = ""
-    let viewModel = ContentViewModel()
+    @ObservedObject var viewModel = ContentViewModel()
     
     var body: some View {
         
@@ -19,6 +19,27 @@ struct ContentView: View {
             //Option4
             DefaultNavigationView(title: "Welcome") {
                 VStack {
+                    
+                    /**
+                     https://www.hackingwithswift.com/quick-start/swiftui/how-to-let-users-select-pictures-using-photospicker
+                     */
+                    NavigationLink(destination: PhotosView(), label: {
+                        Text("Set Photo")
+                    })
+                    .padding(16)
+                    
+                    NavigationLink(destination: MultiplePhotosView(), label: {
+                        Text("Set multiple Photos")
+                    })
+                    .padding(16)
+                    
+                    Button {
+                        viewModel.scheduleNotification()
+                    } label: {
+                        Text("Schedule Notifiation")
+                    }
+                    .padding(16)
+
                     
                     NavigationLink(destination: CountriesView()) {
                         ZStack {
@@ -78,6 +99,11 @@ struct ContentView: View {
 //            .toolbarBackground(.visible, for: .navigationBar)
 //        }
         }
+        .alert(isPresented: $viewModel.showNotificationAlert, content: {
+            Alert(title: Text("Notification Alert"),
+            message: Text("Please allow notifications for app"),
+                  dismissButton: .default(Text("Ok")))
+        })
 
     }
 }

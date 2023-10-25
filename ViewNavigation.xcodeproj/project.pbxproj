@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C67594532AE99F970003E71F /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67594522AE99F970003E71F /* PhotosView.swift */; };
+		C67594552AE99FA80003E71F /* MultiplePhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67594542AE99FA80003E71F /* MultiplePhotosView.swift */; };
 		C69F968B2ABB76F200480F6F /* ViewNavigationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69F968A2ABB76F200480F6F /* ViewNavigationApp.swift */; };
 		C69F968D2ABB76F200480F6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69F968C2ABB76F200480F6F /* ContentView.swift */; };
 		C69F968F2ABB76F400480F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69F968E2ABB76F400480F6F /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C67594522AE99F970003E71F /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		C67594542AE99FA80003E71F /* MultiplePhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePhotosView.swift; sourceTree = "<group>"; };
 		C69F96872ABB76F200480F6F /* ViewNavigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewNavigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69F968A2ABB76F200480F6F /* ViewNavigationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNavigationApp.swift; sourceTree = "<group>"; };
 		C69F968C2ABB76F200480F6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C67594512AE99F7E0003E71F /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				C67594522AE99F970003E71F /* PhotosView.swift */,
+				C67594542AE99FA80003E71F /* MultiplePhotosView.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
 		C69F967E2ABB76F200480F6F = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +136,7 @@
 		C69F96892ABB76F200480F6F /* ViewNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				C67594512AE99F7E0003E71F /* Photos */,
 				C6F14C412AC7CDD3007F9CAE /* Countries */,
 				C646ABBB2AC4B15F00763525 /* DetailsView */,
 				C646ABBA2AC4B14F00763525 /* MainView */,
@@ -259,10 +273,12 @@
 			files = (
 				C6F14C462AC7CE2C007F9CAE /* CountriesView.swift in Sources */,
 				C69F96A82ABB827D00480F6F /* ContentViewModel.swift in Sources */,
+				C67594532AE99F970003E71F /* PhotosView.swift in Sources */,
 				C69F969D2ABB79DF00480F6F /* NavBarModifier.swift in Sources */,
 				C69F96A62ABB80A800480F6F /* NamesManager.swift in Sources */,
 				C6F14C492AC7CE77007F9CAE /* CountriesViewModel.swift in Sources */,
 				C69F96A22ABB7E1800480F6F /* DestinationViewModel.swift in Sources */,
+				C67594552AE99FA80003E71F /* MultiplePhotosView.swift in Sources */,
 				C69F969F2ABB7B5900480F6F /* DefaultNavigationView.swift in Sources */,
 				C69F96992ABB775F00480F6F /* DestinationView.swift in Sources */,
 				C6F14C4E2AC7D80C007F9CAE /* Extensions.swift in Sources */,
@@ -402,6 +418,7 @@
 				DEVELOPMENT_TEAM = 9VSLNRAT43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need to use your camera\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -431,6 +448,7 @@
 				DEVELOPMENT_TEAM = 9VSLNRAT43;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"We need to use your camera\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
