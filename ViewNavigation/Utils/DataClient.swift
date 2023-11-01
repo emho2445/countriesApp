@@ -15,8 +15,8 @@ enum HTTPMethod: String {
     case post = "POST"
     case put = "PUT"
 }
-typealias HTTPHeaders = [String: String]
 
+typealias HTTPHeaders = [String: String]
 
 struct UrlRequestDetails {
 
