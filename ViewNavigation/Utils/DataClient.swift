@@ -17,7 +17,6 @@ enum HTTPMethod: String {
 }
 typealias HTTPHeaders = [String: String]
 
-
 struct UrlRequestDetails {
 
     public var url: URL
